@@ -37,32 +37,28 @@ Create MySQL database shop
 
 Configure .env:
 
-ini
 DB_HOST=127.0.0.1
 DB_DATABASE=shop
 DB_USERNAME=root
 DB_PASSWORD=
 Run migrations:
 
-bash
-php artisan migrate --seed
+
+php artisan migrate 
 Usage
 Generate test data:
 
-bash
-php artisan shop:seed --products=50 --variants=10 --images=5
-Start development server:
+php artisan shop:seed --products=10 --variants=10 --images=5
 
-bash
+Start development server:
 php artisan serve
+
 API Endpoints
 GET /api/products - Paginated product list
-
 GET /api/products/{uuid} - Product details
 
 Configuration
 Environment variables:
 
-ini
 SHOP_API_PER_PAGE=3
 APP_DEBUG=true
